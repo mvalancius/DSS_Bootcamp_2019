@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, graphicx, hyperref, bm, tabu, enumitem, xcolor}
+
+\usepackage[parfill]{parskip}    		
+\oddsidemargin -0in \setlength{\textwidth}{6.6 in} \textheight 9in \topmargin -.5in
+
+\xdefinecolor{custom_red}{rgb}{0.58, 0.32, 0.32} % Marsala
+\newcommand{\newc}{\newcommand}
+\newc{\Yi}{Y_{i}}
+\newc{\yi}{y_{i}}
+\newc{\thetai}{\theta_{i}}
+\newc{\reals}{\mathbb{R}}
+\newc{\limit}{\lim_{n \rightarrow \infty}}
+\newc{\Sum}{\sum_{n=1}^\infty}
+\newc{\powerSeries}{\sum_{n=0}^\infty a_n(x-x_0)^n}
+\newc{\integral}{\int_a^b}
+\newc{\naturals}{\mathbb{N}}
+\newc{\rationals}{\mathbb{Q}}
+\newc{\prob}{\mathsf{P}}
+\newc{\mc}[1]{\mathcal{#1}}
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+\newc{\iidsim}{\stackrel{\mbox{\tiny iid}}{\sim}}
+\newc{\indsim}{\stackrel{\mbox{\tiny indep}}{\sim}}
+%
+
+% %% Off 
+%\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+% on
+\newc{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+%
+
+\def\mcal{\cal}
+\newcommand{\mbf}[1]{\mbox{\boldmath $ {#1} $} }
+\def\R{{\mathchoice{\rm I\hskip-.2em R}{\rm I\hskip-.2em R}
+		{\rm I\hskip-.15em R}{\rm I\hskip-.1em R}}}
+
+\title{\vspace{-2ex}Bootcamp Assessment 2019\vspace{-3ex}}
+\date{\vspace{-2ex}}
+\begin{document}
+\maketitle
+%% PUT YOUR NAME HERE %%
+\noindent Name: \rule{6cm}{.01cm} \\ \\
+Please show your work for all problems, even if you do not arrive at a solution!
+\begin{enumerate}
+%%%% PROBLEM 1 %%%%
+\item For which values of $p > 0$ does $\sum_{n=1}^\infty \frac{1}{n^p}$ converge? \rule{5cm}{.01cm} % SOLUTION FOR PROBLEM 1 
+    % WORK FOR PROBLEM 1
+    \vfill
+    
+%%%% PROBLEM 2 %%%%
+\item If $X = \begin{bmatrix}-2 & 2 \\ -1 & -1 \end{bmatrix}$ and $Y = \begin{bmatrix} 3 & -8 \\ 4 & -1 \end{bmatrix}$, does $XY = YX$? \rule{5cm}{.01cm} % SOLUTION FOR PROBLEM 2
+    % WORK FOR PROBLEM 2
+    \vfill
+\pagebreak
+
+%%%% PROBLEM 3 %%%%
+\item Male verbal GRE scores are normally distributed, with a mean of 149 and a standard deviation of 9. Female verbal GRE scores are also normally distributed, with a mean of 149 and a standard deviation of 8. 55\% of the students who take the GRE are female.
+
+What is the probability that a randomly chosen student is female, given that their verbal GRE score is 170? \rule{6cm}{.01cm} % SOLUTION FOR PROBLEM 3
+    % WORK FOR PROBLEM 2
+    \vfill 
+    
+%%%% PROBLEM 4 %%%%
+\item Let $U \sim Unif(0,1)$ and define $X = -\ln U$.\\
+What is the the distribution of $X$? \rule{6cm}{.01cm} % SOLUTION FOR PROBLEM 4
+ % WORK FOR PROBLEM 4
+\vfill 
+\pagebreak 
+
+%%%% PROBLEM 5 %%%%
+\item Let $X_1,\ldots,X_n$ be iid samples from $Pois(\lambda)$. Show that both $\bar{X} = \frac{1}{n}\sum_{i=1}^n X_i$ and $S^2 = \frac{1}{n-1}\sum_{i=1}^n(X_i - \bar{X})^2$ are unbiased estimators for $\lambda$.
+    % WORK FOR PROBLEM 5
+\pagebreak 
+
+%%%% PROBLEM 6 %%%%
+\item Skewness is a measure of the asymmetry of a probability distribution of a random variable about its mean. We define the skewness of a r.v. $X$ as $\mathsf{E}\left[\left(\dfrac{X-\mu}{\sigma}\right)^3\right]$. A random variable that is right-skewed will have positive skewness, and a variable that is left-skewed will have negative skewness.\\
+    
+If $X \sim Exp(\lambda)$, what is the skewness of $X$?  \rule{6cm}{.01cm} % SOLUTION FOR PROBLEM 6
+ % WORK FOR PROBLEM 6
+\vfill
+
+%%%% PROBLEM 7 %%%%
+\item Let $X_1,\ldots, X_n$ be iid $Beta(\theta,1)$ random variables, where $\theta > 0$. Find the MLE of $\dfrac{1}{\theta}$. \\
+
+MLE =  \rule{5cm}{.01cm} % SOLUTION FOR PROBLEM 7
+% WORK FOR PROBLEM 7
+\vfill
+\pagebreak
+
+%%%% PROBLEM 8 %%%%
+\item The joint pdf of $X$ and $Y$ is $$f(x,y) = \frac{e^{-yx^2/2}}{\sqrt{2\pi / y}} \cdot ye^{-y}, \quad x \in \reals, y > 0$$
+    \begin{enumerate}
+        \item Find the conditional density $f_{X|Y}(x|y)$ of $X$ given $Y=y$.  \rule{5cm}{.01cm}  % SOLUTION FOR PROBLEM 8a \\
+        \textbf{Hint}: consider decomposing the joint into the product of conditional and marginal densities.
+        
+        \vfill
+        
+        \item What is $\mathsf{E}[X|Y]$?  \rule{6cm}{.01cm} % SOLUTION FOR PROBLEM 8b
+        % WORK FOR PROBLEM 8b
+        \vfill 
+            
+        \item What is $\mathsf{Var}(X|Y)$? \rule{6cm}{.01cm}  % SOLUTION FOR PROBLEM 8c
+        % WORK FOR PROBLEM 8c
+        \vfill 
+        
+        \item What is $\mathsf{Var}(X)$?  \rule{6cm}{.01cm} % SOLUTION FOR PROBLEM 8d
+        % WORK FOR PROBLEM 8d 
+        \vfill
+        \end{enumerate}
+%%% PROBLEM 9 %%%
+\item What is your favorite distribution?  \rule{6cm}{.01cm} 
+
+\pagebreak
+
+%%% PROBLEM 10 %%%
+\item \textbf{Optional: if you are considering STA 721, you should attempt this problem.} \\
+Let $\mathbf{Z} = (Z_1,\ldots, Z_m)'$ be a vector of $m$ iid $N(0,1)$ random variables. Then $\mathsf{E}[\bm{Z}] = \bm{0}$ and $Cov(\bm{Z}) = \bm{I}_m$. Recall that we say a random $n$-dimensional vector $\bm{Y}$ is distributed multivariate normal if it has the same distribution as $\bm{AZ} + \bm{b}$ where $\bm{A}$ is some fixed $ n \times m$ matrix and $\bm{b}$ is some fixed $n \times 1$ vector. That is, $\bm{Y} \sim N_n(\bm{\mu}, \bm{V})$, where $\bm{\mu} = \bm{b}$ and $\bm{V} = \bm{AA'}$. 
+
+However, it is not clear that if we know $\bm{b}$ and $\bm{AA'}$ then $\bm{Y}$ is uniquely or well defined. Notice that the covariance matrix of $\bm{Y}$ is $\bm{V} = \bm{AA'}$. But because matrix square roots are not unique, we could have some matrix $\bm{B}$ such that $\bm{V} = \bm{BB'}$ but $\bm{B} \neq \bm{A}$.
+
+With this information, prove that if $\bm{Y} \sim N_n(\bm{\mu}, \bm{V})$ and $\bm{W} \sim N_n (\bm{\mu},\bm{V})$, then $\bm{Y}$ and $\bm{W}$ follow the same distribution.
+\end{enumerate}
+
+\end{document}
